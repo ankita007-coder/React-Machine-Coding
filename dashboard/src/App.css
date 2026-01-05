@@ -1,0 +1,24 @@
+.dashboard-layout{
+  margin: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  min-height: 95vh;
+  width: 95vw;
+}
+
+.right-layout{
+  width: 70%;
+}
+
+.left-layout{
+  width: 30%;
+}
+
+.dashboard-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px,1fr));
+  gap: 1rem;
+}
