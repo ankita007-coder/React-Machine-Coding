@@ -1,16 +1,80 @@
-# React + Vite
+Got it 👍
+Here’s a **SHORT, CLEAN, INTERVIEW-FRIENDLY `README.md`** — no fluff, no over-documentation.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+````md
+# 🔔 Notification Toast System
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A reusable toast notification system built in React using Context.  
+Allows any component to trigger notifications without coupling UI logic.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
+- Global `notify()` function
+- Auto-dismiss + manual close
+- Multiple types (success, error, warning, info)
+- Configurable position
+- Simple and reusable
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Setup
+
+Wrap your app once:
+
+```jsx
+<NotificationProvider position="top-right">
+  <App />
+</NotificationProvider>
+````
+
+---
+
+## Usage
+
+Trigger a notification from anywhere:
+
+```jsx
+const { notify } = useNotification();
+
+notify({
+  message: 'Saved successfully',
+  type: 'success',
+  duration: 3000
+});
+```
+
+---
+
+## Positions Supported
+
+`top-right`, `top-left`, `bottom-right`, `bottom-left`,
+`top-center`, `bottom-center`
+
+---
+
+## Design Notes
+
+* State managed via Context
+* UI rendered through a single container
+* Position handled via CSS (presentation only)
+
+---
+
+## Summary
+
+Lightweight, scalable notification system suitable for dashboards and apps.
+
+```
+
+---
+
+### ✅ This is perfect for:
+- Interviews  
+- Personal projects  
+- GitHub reviewers  
+
+If you want an **even more minimal (5–6 lines)** version, say the word.
+```

@@ -4,7 +4,7 @@ const Toast = ({message,type,onClose,id}) => {
   return (
     <div className={`toast toast-${type}`}>
       {message}
-      <button onClick={()=>onClose(id)}>Close</button>
+      <button onClick={()=>onClose(id)}>x</button>
     </div>
   )
 }
