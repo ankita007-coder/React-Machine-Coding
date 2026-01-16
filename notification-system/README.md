@@ -1,9 +1,3 @@
-Got it 👍
-Here’s a **SHORT, CLEAN, INTERVIEW-FRIENDLY `README.md`** — no fluff, no over-documentation.
-
----
-
-````md
 # 🔔 Notification Toast System
 
 A reusable toast notification system built in React using Context.  
@@ -28,9 +22,7 @@ Wrap your app once:
 <NotificationProvider position="top-right">
   <App />
 </NotificationProvider>
-````
-
----
+```
 
 ## Usage
 
@@ -46,14 +38,10 @@ notify({
 });
 ```
 
----
-
 ## Positions Supported
 
 `top-right`, `top-left`, `bottom-right`, `bottom-left`,
 `top-center`, `bottom-center`
-
----
 
 ## Design Notes
 
@@ -61,20 +49,8 @@ notify({
 * UI rendered through a single container
 * Position handled via CSS (presentation only)
 
----
-
 ## Summary
 
 Lightweight, scalable notification system suitable for dashboards and apps.
 
-```
-
----
-
-### ✅ This is perfect for:
-- Interviews  
-- Personal projects  
-- GitHub reviewers  
-
-If you want an **even more minimal (5–6 lines)** version, say the word.
 ```
