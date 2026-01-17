@@ -1,10 +1,9 @@
 import { useContext, useState } from "react";
 import "./App.css";
-import { NotificationContext } from "./components/NotificationProvider";
+import { useNotification } from "./components/NotificationProvider";
 
 function App() {
-  const { notify } = useContext(NotificationContext);
-
+  const {notify} = useNotification()
   const handleSuccess = () => {
     notify({
       message: "Profile updated successfully",

@@ -52,5 +52,3 @@ notify({
 ## Summary
 
 Lightweight, scalable notification system suitable for dashboards and apps.
-
-```
