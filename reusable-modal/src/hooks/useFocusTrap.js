@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 
 export const useFocusTrap = (ref, isOpen) => {
-  if (!isOpen || !ref.current) {
-    return;
-  }
   useEffect(() => {
+    if (!isOpen || !ref.current) {
+      return;
+    }
     const focusableSelectors =
       'a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])';
     const findAllSelectors = ref.current.querySelectorAll(focusableSelectors);
@@ -17,19 +17,20 @@ export const useFocusTrap = (ref, isOpen) => {
         // SHIFT + TAB
         if (document.activeElement === firstSelector) {
           e.preventDefault();
-          lastElement.focus();
+          lastSelector.focus();
         }
       } else {
         // TAB
         if (document.activeElement === lastSelector) {
           e.preventDefault();
-          firstElement.focus();
+          firstSelector.focus();
         }
       }
     }
-    ref.current.addEventListener("keydown",handleKeyDown)
-      return ()=> {
-        ref.current?.removeEventListener("keydown",handleKeyDown)
-      }
+    ref.current.addEventListener("keydown", handleKeyDown);
+    firstSelector?.focus();
+    return () => {
+      ref.current?.removeEventListener("keydown", handleKeyDown);
+    };
   }, [ref, isOpen]);
 };
