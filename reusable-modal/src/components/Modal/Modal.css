@@ -1,0 +1,20 @@
+.modal-overlay{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(229, 233, 236, 0.128);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+align-items: center;
+}
+
+.modal-container{
+    background-color: black;
+    color: white;
+    min-width: 50vw;
+    min-height: 50vh;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 12px;
+}
